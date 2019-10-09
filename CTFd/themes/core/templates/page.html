@@ -1,18 +1,65 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="container">
 	<!-- {{ content | safe }} -->
-	<div class="row">
-    <div class="col-md-6 offset-md-3">
-    	<br>
-    	<br>
-    	<br>
-        <img class="nullByteLogo" style="max-width: 500px;padding: 50px;padding-top: 14vh;" src="themes/core/static/img/NullByteCTF.png" />
+    <div id="allElements">
+        <div id="headLogo">
+            <div id="firstImage">
+                <img class="mitLogo" src="themes/core/static/img/MIT.jpg" />
+            </div>
+            <div id="secondImage">
+                <img class="ttLogo" src="themes/core/static/img/tt.png"/>
+            </div>
+        </div>
         <br>
-        <!-- <img class="mitLogo" style="max-width: 500px;padding: 50px;padding-top: 14vh;" src="themes/core/static/img/MIT.jpg" />
-        <img class="ttLogo" style="max-width: 500px;padding: 50px;padding-top: 14vh; position: absolute; left: 50vw" src="themes/core/static/img/tt.png"/> -->
+        <img class="nullByteLogo" src="themes/core/static/img/NullByteCTF.png" />
+        <br>
+      
+        <style>
+            ::webkit-scroll {
+                display: none;  
+            }
+
+            #allElements {
+                display: flexbox;
+                text-align: center;
+            }
+            body {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .nullByteLogo {
+                position: relative;
+                max-width: 500px;
+                top: 5vh;
+            }
+            #headLogo {
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+            }
+            #firstImage {
+                left: 3vw;
+            }
+            #secondImage {
+                margin-right: 3px !important;
+                margin-left: 42vw;
+            }
+            .mitLogo {
+                top: 12vh;
+                left: 2px !important;
+                margin-left: ;
+                max-width: 600px;
+            }
+
+            .ttLogo {
+                max-height: 150px;
+                left: 3vw !important;
+            }
+
+
+        </style>
     </div>
-</div>
-	</div>
 {% endblock %}
